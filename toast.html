@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Michael Xiao</title>
+    <link rel="icon" href="img/headshot.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/me.png" width="300" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a class="box-label" href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="https://drive.google.com/open?id=11pI2ksOFykw6gV0w51XoDUFYkddM8-dp">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Toast Printer</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / toast</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/toast/cover.png" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Toast Printer</h3>
+            <h5> Microcontrollers Final Project </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+
+            <center><iframe width="560" height="315" src="https://www.youtube.com/embed/zUwJVrSkh3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Product</li>
+                <li><i class="ion-ios-circle-filled"></i> Publication</li>
+                <li><i class="ion-ios-circle-filled"></i> Electronics</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Additional Documenation</h4>
+            <ul class="social-ul">
+              <li class="box-social"><a href="http://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/f2018/mfx2_keb278/mfx2_keb278/mfx2_keb278/index.html">ECE 4760</a></li>
+              <li class="box-social"><a href="https://hackaday.com/2018/12/12/toast-printer-prints-tasty-images-and-weather-forecasts/">Hackaday</a></li>
+              <li class="box-social"><a href="https://blog.adafruit.com/2018/12/21/toast-printer-prints-tasty-images-and-weather-forecasts-raspberry_pi-piday-raspberrypi/">Adafruit Blog</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+<!---------------------------->
+
+
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+
+        <div>The device operates using two servos to control a two-axis gantry with a 3D printed heat gun mount.  A Raspberry Pi is used to gather image or weather data from the internet to be sent over to the PIC32 microcontroller.  TOAST has three modes of operation: Image, Sketch, and Weather.  The project was initially pursued for fun, but we believe its novelty could push this device into profit.
+        </div>
+        <div>&nbsp; </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="fa-container">
+                    <center><img src="./assets/images/draw.PNG" style="width:80px;height:80px;"></center>
+                </div>
+                <h3 class="text-center">Sketch</h3>
+                <p>In sketch mode, the user can use a 4 button controller to manually control TOAST to create a work of art.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="fa-container">
+                   <center><img src="./assets/images/image.PNG" style="width:90px;height:80px;"></center>
+                </div>
+                <h3 class="text-center">Image</h3>
+                <p>In image mode, a user can upload an image from the internet through SSH into the pi with a phone or computer, which is then processed into a print sequence.   </p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="fa-container">
+                    <center><img src="./assets/images/cloud.PNG" style="width:100px;height:80px;"></center>
+                </div>
+                <h3 class="text-center">Weather</h3>
+                <p> In weather mode, the device automatically collects the temperature and conditions via Yahoo!’s weather API and prints the weather onto the toast. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 col-md-12">
+    <div class="fa-container">
+        <center><img src="./assets/images/back.jpg" style="width:483px;height:362px;"></center>
+    </div>
+</div>
+
+
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">High Level Design</h2>
+
+                <h3>Rationale</h3>
+                <div>Our idea for TOAST was derived through several layers of brainstorming.  One theme that both of us were very enthusiastic about was creating a device that had a large mechanical hardware component and had to do with food.  TOAST fit both of these categories and was both a challenging endeavor and a fun project.  The device is also very pragmatic in the fact that it can combine some of our morning routines together autonomously.  If TOAST is run when a user wakes up, it can provide a warm breakfast and an overview for how the user should dress or prepare for the day ahead.  Additionally, there is a lot of potential for fun and creativity within the device including sending texts via toast, sending a loved one a picture, or another novel avenue for drawing and sketching.
+                </div>
+
+                <h3>Logical Structure</h3>
+
+                <center>
+                  <img src="./assets/images/2.png" style="width:600px;height:250px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 1: High Level Flow Diagram</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <div>
+                  TOAST takes input from a user on a host computer or phone to decide what to make. As mentioned above, there are three operational modes for TOAST: weather, image, or sketch mode. Setting the mode and processing an image/weather conditions is done via a python script hosted on a raspberry pi zero w, which then passes the information to print onto the pic32 through a makeshift serial/bit banging process. TOAST itself is an acrylic chassis with a two axis gantry system supporting a heat gun. In the two automatic modes (weather and image), the two stepper motors move the heat gun in a lawnmower pattern through a 10x10 array, either choosing to toast a point or not based on the information sent from the pi.  In sketch mode, a four button switch is used to control the motors, either moving the toasting point up, down, left, or right.  To toast a point, the user can let the heat gun simply remain still for a few seconds.
+                </div>
+                <div>&nbsp; </div>
+                <center>
+                  <img src="./assets/images/button.PNG" style="width:300px;height:200px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 2: 4-button Controller</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <h3>Hardware and Software Tradeoffs</h3>
+                <div>
+                  One of the main hardware limitations we had was the motor drivers we chose to operate our stepper motors.  We chose to use the L298N motor drivers which were robust, affordable, and could handle the current of our larger stepper motors.  However, each of these motor drivers took four GPIO pins to operate, limiting pins for other operations.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  Another trade off we had to consider was using a Raspberry Pi or using a wifi module directly with the PIC.  If we had more time to iron out the details, I believe a wifi module would have been feasible.  However, the Raspberry Pi Zero W was a very cheap solution ($10) to overcome the obstacles of both the wifi connectivity and the image processing.  The main challenges we had with this implementation was simply learning how to operate a Raspberry Pi and figuring out a data transmission pathway between the Pi and the PIC.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">Hardware</h2>
+
+                <h3>Hardware Overview</h3>
+                <div>
+                  As seen below, before we began laser cutting or 3D printing, we used Autodesk Fusion 360 to make a detailed 3D model of our design.  As an overview, there are two layers of the chassis.  The bottom layer houses one motor that moves a plate holding the bread in the y direction.  The top layer houses another motor that moves a plate in the x direction with a hole in it such that the heat gun can be mounted on the device.  The plates move via a laser cut rack and pinion design as seen below.
+                </div>
+                <center>
+                  <img src="./assets/images/3.png" style="width:600px;height:300px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 3: CAD Prototype</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <h3>Parts List</h3>
+                <ul>
+                  <li>Heat Gun</li>
+                  <li>Acrylic for Frame</li>
+                  <li>Stepper motor (x2)</li>
+                  <li>Motor driver (x2)</li>
+                  <li>PIC32 Small Board Breakout</li>
+                  <li>Raspberry Pi Zero W</li>
+                </ul>
+                <div>
+                  More detailed parts list can be found in the Appendices.
+                </div>
+
+                <h3>Laser Cut Pieces</h3>
+                <div>
+                  The majority of our pieces were designed to be made with a laser cutter.  This was our prototyping method of choice due to our access to scrap acrylic in RPL and the speed of production which is much quicker compared to 3D printing.  One of the first challenges we had to overcome was to find a method to join acrylic pieces together into a 3 dimensional assembly.  Our first version, as seen below, was made with slots and secured with glue. However, we found that though this held well initially, it was not nearly as robust as we wanted.
+                </div>
+                <center>
+                  <img src="./assets/images/4.png" style="width:600px;height:400px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 4: TOAST frame prototype</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  Upon further experimentation, we designed our own screw joints as shown below.  The design builds off of a slot and tab design by adding an additional hole on the slot side and a nut holder on the tab side.  This essentially built in threads onto our 2.5 D model offering several advantages including:
+                </div>
+                <ul>
+                  <li>Ease of assembly</li>
+                  <li>No cure times</li>
+                  <li>Very strong joints (x2)</li>
+                  <li>Hot swapping individual components for redesigns or replacements</li>
+                </ul>
+                <center>
+                  <img src="./assets/images/screw.PNG" style="width:300px;height:200px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 5: Acrylic screw joint</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  After designing the chassis, we then designed and printed the rack and pinion to convert the precise rotational movements of the stepper motors into lateral movement of the plates.
+                </div>
+                <center>
+                  <img src="./assets/images/rack.PNG" style="width:250px;height:300px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 6: Rack and pinion</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  Our final laser cut DXF file is shown below with notes on what each part is.  As seen, all of our parts fitted onto two 12” x 12” acrylic sheets.  You can download them here if you want to edit or recreate TOAST.
+                </div>
+                <center>
+                  <img src="./assets/images/5.png" style="width:600px;height:300px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 7: TOAST frame annotated DXF</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  One last addition we made to our design was creating a hardware bed.  This bed combines our various electrical components and neatly secures them to a frame such that they are not loosened or damaged with movement.  In the design, there are holes for mounting the two motor drivers, the PIC32 small board, and the Raspberry Pi Zero W.  The bed was velcroed on to one of the sides of TOAST for easy removal for debugging and addition of new features.
+                </div>
+                <center>
+                  <img src="./assets/images/bed.PNG" style="width:500px;height:350px;" class="center">
+
+                  <div>&nbsp; </div>
+                  <div>Figure 8: Hardware Bed</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <h3>3D Printed Pieces</h3>
+                <center>
+                  <img src="./assets/images/6.PNG" style="width:600px;height:300px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 9: Motor Mount and Heat Gun Mount</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  Despite having most of the physical design laser cut, there were a few more complex 3D pieces that we resorted to 3D printing.  The first was a simple motor holder, shown on the left, which secures the motor to the frame with M3 size screws.  The second piece we designed was the heat gun mount which is screwed into the sliding top plate.  The heat gun fits into the cylindrical cutout and is secured with some strong elastic bands.
+                </div>
+                <div>&nbsp; </div>
+                <center>
+                  <img src="./assets/images/7.png" style="width:600px;height:450px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 10: Assembled Toast</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <h3>Motor Drivers</h3>
+                <div>
+                  A large part of our preparation for the project consisted of learning how both our stepper motors and motor drivers worked.  Referring to the L298N data sheet and the Arduino library, we learned about how we could operate the stepper motors.  Stepper motors have a magnetic core with “fingers” sticking out alternating polarity.  Each of the electromagnets surrounding the core are then alternated on or off, drawing the finger to the next magnet, “stepping” it forward or backwards depending on the signal.  Stepper motors are very precise compared to other motors but require quite a bit of current to operate well.
+                </div>
+                <center>
+                  <img src="./assets/images/8.png" style="width:200px;height:200px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 11: Stepper Motor Diagram</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  The motor drivers have four data inputs, three power pins, and four data outputs.  Since we were choosing to operate at 6V, we did not need to supply an additional 5V line to the motor driver (there is a built in voltage regulator built for up to 12V).  The ground line was common grounded with the PIC and the Pi.  Reading further on the Arduino stepper.h library, we found the sequence for the four inputs to be:
+                </div>
+                <center>
+                <table style="width:50%">
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>C0</th>
+                    <th>C1</th>
+                    <th>C2</th>
+                    <th>C3</th>
+                  </tr>
+                  <tr>
+                    <td>Step 1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Step 2</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Step 3</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>Step 4</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                  </tr>
+                </table>
+              </center>
+                <div>&nbsp; </div>
+                <div>
+                  Running this sequence with a short delay turns the stepper motor forward a step.  To run in reverse, we could simply run this in reverse starting with step 4 .. 3 .. 2 .. 1 in the code.  Testing this and understanding how the steppers worked really helped us throughout the project with troubleshooting and debugging as we knew what to expect as outputs on our motor drivers.
+                </div>
+
+                <h3> Power </h3>
+                <div>
+                  Finding a power supply that fit our needs was a very unexpected hardware problem that we ran into early on.  We found that on operation, our stepper motors drew more than 1 A each running at 6V.  Running both together therefore would draw more than 2 A - more than even our power supply at the bench could supply.  Luckily, we were able to find a power supply in Professor Land’s spare parts cabinet that was rated for 2.5 A at 6V.  We were able to slice off the connection and attach our own headers to connect the power supply to our system.  To ensure that we did not run into power problems, we made sure to limit our device’s operation to just one motor at any given time.
+                </div>
+                <center>
+                  <img src="./assets/images/power.PNG" style="width:230px;height:300px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 12: 6V, 2.5 A Power Supply</div>
+                  <div>&nbsp; </div>
+                </center>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">Software</h2>
+
+                <h3>PIC32</h3>
+                <div>
+                  Our software for the PIC was essentially split up into three parts: waiting for a command, manual mode, and automatic mode.  Before entering any of the code, our main was run and initialized the GPIO pins as follows:
+                </div>
+                <div>&nbsp; </div>
+                <div> Output: </div>
+                <div>&nbsp; </div>
+                <div> B0, B1, B2, B3 - Top motor </div>
+                <div>B7, B13, B9, B11 - bottom motor </div>
+                <div>&nbsp; </div>
+                <div> Input: </div>
+                <div>&nbsp; </div>
+                <div> A3 - start signal from pi </div>
+                <div> A2 - data signal from pi </div>
+                <div>A4, B5, B14, B15 - signals from controller  </div>
+
+                <h5> Waiting for command:</h5>
+                <div>
+                  Before the motors are allowed to move, a start signal from the pi must be received by the PIC32.   We first tried to connect the pi and PIC32 through UART serial.  Following instructions both on the ECE 4760 website and on online forums, we were able to successfully connect each of the devices individually to our laptops’ serial monitors.  Unfortunately after several hours of work, we were not able to connect the two devices together through serial.  Rather than struggling through this, we decided that we could implement our own version of serial by bit banging the data through the GPIO pins.  This was a feasible option for us because our data was only 100 bits.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  We used one output from the Pi to signal the start of transmission and then another output from the Pi to indicate zeros or ones in the data array separated by a 5 ms delay.   On the PIC side, this data was read every 5 ms and appended to the PIC’s memory.  The biggest issue we had with this was calibrating the timing.  Our first run had several pixels that looked shifted several rows over.  After measuring the signal from the pi with an oscilloscope, we found that the delay from the pi was actually slightly more than 5 ms.  To minimize this discrepancy, we extended this delay to 20 ms and added an additional 15 ms every 20 reads to keep both sides of the transmission calibrated.  After further testing, we found that this effectively solved our calibration issues despite being a relatively messy solution.  With this in mind, the full data transmission takes approximately 2 seconds to occur (100 bits * 20 ms) which is a reasonable amount of time for operation.
+                </div>
+
+                <h5> Manual:</h5>
+                <div>
+                  After receiving the data array from the pi, the PIC decides to operate either in manual mode or automatic mode.  It does this by counting the number of zeros sent in the array.  If and only if, the entirety of the 100 bits were 0 does the PIC then enter manual draw mode.  In this mode, the motors are controlled very simply by the four buttons on the wired controllers.  These buttons are tied low to ground over a 10 k Ohm resistor.  To prevent the device from drawing too much current at the same time, we limited the movement to only one axis at a time, with priority in the y axis moving forward or backward over moving left or right.  To exit draw mode, the device can be reset to wait for a new transmission across the pi communication lines.
+                </div>
+
+                <h5> Automatic:</h5>
+                <div>
+                  After receiving the data array from the pi, the PIC decides to operate either in manual mode or automatic mode.  It does this by counting the number of zeros sent in the array.  If and only if, the entirety of the 100 bits were 0 does the PIC then enter manual draw mode.  In this mode, the motors are controlled very simply by the four buttons on the wired controllers.  These buttons are tied low to ground over a 10 k Ohm resistor.  To prevent the device from drawing too much current at the same time, we limited the movement to only one axis at a time, with priority in the y axis moving forward or backward over moving left or right.  To exit draw mode, the device can be reset to wait for a new transmission across the pi communication lines.
+                </div>
+
+                <h3>Raspberry Pi</h3>
+                <div>
+                  As mentioned before, the raspberry pi is used for wifi connectivity and image processing, such that TOAST can be controlled and operated remotely. Currently the process is slightly convoluted because we did not have time to implement an app as originally planned.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  First, the user SSHs into the pi from a host device such as a phone or computer. Next, if the user wishes to upload an image for toasting, they can save the image and use pscp, PuTTY Secure Copy client, to send the image over to the pi. If intending to use the device in weather or sketch mode, this step can be skipped.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  Next, the user simply has to run the python script over SSH, along with a keyword indicating the mode. There are three keywords associated with the modes: weather, image, sketch. The command would look something like this:
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  <font face="courier new">python output.py weather </font>
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  After this command has been sent, the pi runs a processing script according to the parameter sent, updating a 10x10 array of “1”s and “0”s to be sent to the pic.
+                </div>
+                <h6> Image </h6>
+                <div>
+                  The pi will downsample the image to a 10x10 image, and will then go through pixel by pixel to decide if the pixel is dark or light, setting 1s or 0s accordingly.  An example of two images are shown below.
+                </div>
+                <center>
+                  <img src="./assets/images/9.png" style="width:500px;height:250px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 13: Example Images</div>
+                  <div>&nbsp; </div>
+                </center>
+                <h6> Weather </h6>
+                <div>
+                  The pi uses a python weather api to collect data from Yahoo weather, namely the temperature and condition. We wrote predefined conditions for the values of the temperature to be written on the top half of the toast, and predefined graphics to represent the conditions windy, raining, snowing, and sunny.  The layout and icons for conditions are shown below.
+                </div>
+                <center>
+                  <img src="./assets/images/10.png" style="width:1000px;height:300px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 14: Example Weather print and condition icons</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <h6> Sketch </h6>
+                <div>
+                  The array is set to all zeros, which the pic will then read and interpret as sketch mode, letting the user move freely.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  The Pi then uses a custom digital interface between the pic and the pi to let the pic know we are ready send data, and then transmit bit by bit the 10x10 array.
+                </div>
+                <div>&nbsp; </div>
+
+                <div>&nbsp; </div>
+                <div>Further detailed commented code can be found in the Appendices </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">Results</h2>
+
+                <h3>Videos</h3>
+                <center>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/zUwJVrSkh3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div>&nbsp; </div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/gYBhZNorL6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+
+                <center>
+                  <img src="./assets/images/11.PNG" style="width:800px;height:270px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 15: Toasted Toast - Weather mode, draw mode, image mode respectively</div>
+                  <div>&nbsp; </div>
+                </center>
+
+                <div>
+                  As seen in the videos and images above, TOAST was able to operate very successfully in all three modes.  The toasted images were very recognizable and the text was legible.  We were quite proud of our mechanical design as the device looked great and felt very sturdy.
+                </div>
+                <div>&nbsp; </div>
+
+
+                <div>
+                  One of the first things we tested before building our chassis was the distance the heat gun needed to be from the toast. To test this, we held the heat gun at different heights from the toast and measured the time until just before burning, and the radius of the toasted area.
+                </div>
+
+                <center>
+                  <img src="./assets/images/12.png" style="width:500px;height:270px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 16: Heat gun distance from toast compared to radius of toasted area</div>
+                  <div>&nbsp; </div>
+                </center>
+                <center>
+                  <img src="./assets/images/13.png" style="width:500px;height:270px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 15: Heat gun distance from toast compared to time to toast a single pixel</div>
+                  <div>&nbsp; </div>
+                </center>
+                <div>
+                  As seen in the figures above, there was a balance between how long it took to toast and the radius of the toasted area. We wanted “pixels” of toasted areas to be close enough to form a roughly cohesive image without overlapping. We found that 2 cm provided the best balance of pixel size and time to toast; with closer heat, the pixels tended to burn unreliably, and further away took far too long.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  Another issue we had to consider was how long the device took to operate.  As mentioned previously, the data transmission stream from a host device to the pi to the PIC takes a few seconds to fully send the data over.  This was negligible for the user experience as far as we could tell.  However, the time it takes TOAST to finish a piece varied with the number of pixels that needed to be toasted.  For a less complex design, TOAST could finish in under a minute but for a denser or darker design, particularly common in image mode, TOAST could take a few minutes to finish.  If all 100 pixels are to be darkened, then the design will take about 3 minutes and 30 seconds.  Though this time was not too long for a user, it proved to be a difficulty for our very cheap heat gun to handle.  In testing, as we toasted several pieces in succession, two heat guns overheated and stopped working.  Resultantly, we resorted to utilizing a higher end heat gun found in the lab that was able to reliably sustain the hot air for much longer periods of time.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  The product was fun and easy to use for anyone - all you need is a wifi connected device and a dream and you’re ready to TOAST.
+                </div>
+                <div>&nbsp; </div>
+
+                <center>
+                  <img src="./assets/images/back2.jpg" style="width:400px;height:300px;" class="center">
+                  <div>&nbsp; </div>
+                  <div>Figure 17: One happy toast and one happy TOAST user</div>
+                  <div>&nbsp; </div>
+                </center>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">Conclusions</h2>
+                <div>
+                  Overall, we built a very impressive product given our constraints.  We were able to successfully build a gantry chassis that worked well, connect it to the internet, and have it effectively toast images and words on toast.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  However, there are many improvements that we could make if we were to work on this project more.  We could have added auto calibration, attaching touch sensors at the “zero” position such that the device could automatically reset itself after draw mode.  Additionally, we could have increased the resolution of our drawing screen or even implemented an analog drawing method using methods such as Bresenham's line algorithm.  Another improvement that could be made is changing our data structure to take values of 0-255 rather than 0 or 1.  We could then correspond this value in each location of the data array to toast for a shorter or longer duration to achieve different levels of “toasted-ness”.  This would not only give us more flexibility to what we draw but offer smoother images compared to our current binary toasting methods.  Lastly, we would want to create a more streamlined and easy to use app to interface better with the pi.  Currently, SSH works well and is quick but unfortunately may prove difficult for a beginner to use.  Making a better user interface will make TOAST more accessible to the general public and maximize the user experience as well.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  We learned a lot working together on this project.  From getting familiarized with the Raspberry Pi to operating stepper motors to mechanical synthesis, I think we had a project with great breadth and a plethora of problems to be solved.
+                </div>
+
+                <h3>Safety</h3>
+                <div>
+                  Safety was heavily taken into consideration in the development of TOAST.  The most dangerous component by far in our design is the heat gun.  If left unattended, there is the possibility of the heat gun sitting still for too long on top of a piece of toast and starting a fire.  We tested several cheap commercial heat guns that we bought online and luckily we found a failsafe system; when they get too hot, they shut off.  However, after operating these cheaper heat guns on several pieces of toast in rapid succession, these heat guns broke.  We then began using a higher end heat gun, which had dials for toggling the air and the temperature.  This was much safer manual operation as we could control how fast the toast was toasting and shut off the device very easily.  Regardless, TOAST currently cannot be left to operate unattended as the potential for burn TOAST could lead to burnt mouth roofs and burnt houses.
+                </div>
+                <div>&nbsp; </div>
+                <div>
+                  TOAST also aims to create edible toast so we need to consider FDA regulations.  We chose to use a heat gun rather than a direct-contact heating element because this way, we would not have direct contact with the food.  As long as the air quality in the environment we are working with remains safe (which should be the case in our area), the bread will be safe for the user to consume.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center">Appendices</h2>
+
+                <h3>Appendix A: Permissions</h3>
+                <div>
+                  The group approves this report for inclusion on the course website.
+                </div>
+                <div>
+                  The group approves the video for inclusion on the course youtube channel.
+                </div>
+
+                <h3>Appendix B: Schematics</h3>
+                <center>
+                  <img src="./assets/images/14.PNG" style="width:600px;height:400px;" class="center">
+                </center>
+
+                <h3>Appendix C: Budget</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th>Component</th>
+                    <th>Cost</th>
+                    <th>Notes</th>
+                  </tr>
+                  <tr>
+                    <td><a href = "https://www.amazon.com/dp/B01MR2YESW/ref=twister_B01MY561WE?_encoding=UTF8&th=1">Heat Gun</a></td>
+                    <td>$10</td>
+                    <td>For toasting the toast</td>
+                  </tr>
+                  <tr>
+                    <td>Acrylic Sheets</td>
+                    <td>Free</td>
+                    <td>For the frame</td>
+                  </tr>
+                  <tr>
+                    <td><a href = "
+https://www.amazon.com/Stepper-Bipolar-Printer-Machine-Robotics/dp/B07BKRWK1Q/ref=asc_df_B07BKRWK1Q/?tag=hyprod-20&linkCode=df0&hvadid=242086941037&hvpos=1o3&hvnetw=g&hvrand=4531616970669746422&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9005779&hvtargid=pla-447229734196&psc=1">Stepper Motors (x2) </a></td>
+                    <td>$18</td>
+                    <td>Used for moving heat gun on two axes</td>
+                  </tr>
+                  <tr>
+                    <td><a href="
+https://www.amazon.com/Stepper-Bipolar-Printer-Machine-Robotics/dp/B07BKRWK1Q/ref=asc_df_B07BKRWK1Q/?tag=hyprod-20&linkCode=df0&hvadid=242086941037&hvpos=1o3&hvnetw=g&hvrand=4531616970669746422&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9005779&hvtargid=pla-447229734196&psc=1">Stepper Motor Drivers (x2)</a></td>
+                    <td>$14</td>
+                    <td>Used for operating the two stepper motors</td>
+                  </tr>
+                  <tr>
+                    <td><a href = "
+https://www.adafruit.com/product/3400?gclid=EAIaIQobChMI0dmgt4Hu3QIVG4ezCh20KAcwEAQYAiABEgIBQvD_BwE">Raspberry Pi Zero W</a></td>
+                    <td>$10</td>
+                    <td>Wifi connection and image processing</td>
+                  </tr>
+                  <tr>
+                    <td>PIC32MX250F128B </td>
+                    <td>$5</td>
+                    <td>Microcontroller</td>
+                  </tr>
+                  <tr>
+                    <td>Small Board  </td>
+                    <td>$4</td>
+                    <td>For use with PIC</td>
+                  </tr>
+                  <tr>
+                    <td>Protoboard (x2)  </td>
+                    <td>$5</td>
+                    <td>For consolidating electronics and controller</td>
+                  </tr>
+                  <tr>
+                    <td><a href = "https://www.amazon.com/Stainless-Assortment-Precise-Beautiful-Printed/dp/B0714FLXND/ref=sr_1_4?ie=UTF8&qid=1544456215&sr=8-4&keywords=m3+screw+set">M3 Screw Set </a> </td>
+                    <td>$11</td>
+                    <td>Connecting Acrylic frame</td>
+                  </tr>
+                  <tr>
+                    <td>Power Supply  </td>
+                    <td>Free</td>
+                    <td>Scavenged from Professor Land's old parts</td>
+                  </tr>
+                  <tr>
+                    <td>Push Buttons (x4)  </td>
+                    <td>$0.40</td>
+                    <td>For controller</td>
+                  </tr>
+
+                  <tr>
+                    <td>Total</td>
+                    <td>$77.40</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+
+
+                <h3>Appendix D: Commented Code</h3>
+                <div><a href="https://github.com/mfx22/TOAST/blob/master/main.py"> Python Code </a></div>
+                <div><a href = "https://github.com/mfx22/TOAST/blob/master/main.c"> PIC32 Code </a> </div>
+
+                <h3>Appendix E: Datasheets and References</h3>
+                <ul>
+                  <li><a href = "https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf"> L298N Motor Drivers</a></li>
+                  <li><a href = "http://people.ece.cornell.edu/land/courses/ece4760/StudentWork/Sean_Carroll/target_board/4760%20Dev%20Board-20170512T171839Z-001/4760%20Dev%20Board/Assembling%20the%20ECE%204760%20Small%20Dev%20Board.pdf"> Small Board Assembly</a></li>
+                  <li><a href = "https://github.com/arduino-libraries/Stepper"> Arduino Stepper Motor Library</a></li>
+                  <li><a href = "https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up"> Raspberry Pi Zero Getting Started</a></li>
+                  <li><a href = "https://www.ssh.com/ssh/putty/putty-manuals/0.68/Chapter5.html"> PSCP Manual </a></li>
+                  <li><a href = "https://pypi.org/project/weather-api/"> Python Weather API </a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+<!---------------------------->
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Michael Xiao 2019</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
