@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Michael Xiao</title>
+    <link rel="icon" href="img/headshot.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/me.png" width="300" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a class="box-label" href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="https://drive.google.com/open?id=11pI2ksOFykw6gV0w51XoDUFYkddM8-dp">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>[M210] ALIGN</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / align</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/align/cover.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">A digital spirit level with memory</h3>
+            <h5> INFO 4320: Rapid Prototyping </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m13LLIbzwlM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3> Summary </h3>
+
+            <p>
+              ALIGN is a device made for precision crafting and measurement.  A traditional spirit level, as seen in the figure below, consists of a tube of liquid with a small air bubble which responds very precisely to gravity.  This allows the user to measure how level a surface is.  However, the alignment of the tubes limit the use of the spirit level to just the three angles shown.
+            </p>
+
+            <img src="img/align/spiritlevel.png" alt="" class="img-responsive" style="float:left;width:300px;height:300px;margin-right: 30px; margin-bottom: 30px;" />
+
+
+            <p>ALIGN aims to recreate this traditional tool with modern technology.  Using the GY-521 IMU unit, a feather ESP 32 microcontroller, a multicolor RGB LED, and some simple user interface components, ALIGN is able to also capture the level of one surface and compare it to another. </p>
+
+            <p>
+              An inertial measurement unit (IMU) is used to measure the orientation of the device. The controls of the device feature an analog potentiometer, two digital buttons, and a switch.  The device contains an internal 2500 mAh 3.7 V LiPo battery.  The switch is used to connect the enable pin to ground, acting as an on/off switch for the device.  The two buttons are for setting the target level: the black button sets the current orientation as the target and the yellow button sets true flat as the target.  The potentiometer is used to adjust the precision of measurement.  Turning it to the left lowers the threshold and makes for a very precise level while turning it to the right loosens up the constraints for what is considered the same orientation.  A multicolor RGB LED is used to give the user feedback on various actions.  When it turns green, it indicates that the target level has been reached.  Otherwise, the red and blue lights will be on with intensities corresponding to how far away from the target the orientation is.  The blue light corresponds to the x axis and red light corresponds to the y axis.  As ALIGN gets closer to the target, the red/light dims indicating this information to the user.  Having two lights represent two axes lets the user know which axes they need to adjust to reach the target.  Additionally, when the target set button is pressed, the light turns bright white for feedback and when the target reset button is pressed, the light turns off, letting the user know that commands have been received.  Charging and reprogramming the device can be accessed through the small hole to the micro USB connection on the side of the case.
+
+            </p>
+
+            <h3> Design </h3>
+            <p>
+              In designing ALIGN, I first created a schematic outlining the components used and the connections necessary for the electronics to function correctly.  This is shown below in the schematic. The IMU is operated over SDA and SCL using I2C communication.  The buttons are pulled down with 10kOhm resistors and connected to digital pins.  The potentiometer is hooked up to HIGH and LOW and connected to an analog pin.  The enable switch simply connects ground to the enable pin, which turns off the microcontroller.  Three digital output lines control PWM to each of the individual red, green, and blue components of the RGB LED.  Additionally, the LiPo battery is simply hooked up to the JST connector and can be charged through the microUSB.
+            </p>
+
+            <center>
+            <img src="img/align/schematic.png" alt="" class="img-responsive" style=";width:600px;height:600px;margin-right: 30px; margin-bottom: 30px;" />
+            </center>
+
+            <p>
+              After planning out the schematic, I soldered together a protoboard in order to make my circuit robust and condensed.  This assembly is shown in the figure below.  As seen, male and female header pins are added such that the main components (Feather ESP32, IMU, and RGB LED) are removable for future projects or swapping out.   I kept most of the wires on the back side of the protoboard so that the front stayed clean for user interface.  The front simply has the buttons, switch, and potentiometer for control and the RGB LED for user input.  As seen a special 90 degree connector is used for the RGB LED and a piece of electrical tape is below it to prevent shorts on the protoboard.
+
+            </p>
+
+            <center>
+            <img src="img/align/board.png" alt="" class="img-responsive" style=";width:600px;height:400px;margin-right: 30px; margin-bottom: 30px;" />
+            </center>
+
+            <p>
+              After finishing the electrical components, I wrote the code outlined in the additional documents section.  The code has sufficient comments and explanations for implementing the specifications described in the first section.
+
+              Lastly, I made a case for the device so that it looked like a finished product.  This CAD model is shown below and can be downloaded in the additional documents section.
+
+            </p>
+
+            <center>
+            <img src="img/align/case.png" alt="" class="img-responsive" style=";width:600px;height:400px;margin-right: 30px; margin-bottom: 30px;" />
+            </center>
+
+            <p>
+              As seen in the case design, there are ridges on the side of the device for better grip, four mounting holes for securing the protoboard and the top cover.  These mounting holes are designed for a M3 heat insert and M3 machines screws to screw in.  The box is deep enough to house the full protoboard and wide enough so that the battery can live inside of it as well.  The bottom left side of the box has a small hole for a micro USB cable.  The top cover has a hole for the LED to poke out of and another larger slot for access to the user controls.  The printed case and completed electrical components are shown below.  A finished assembly can be seen in both the video and in figure 1 at the top of the report.
+            </p>
+
+
+            <center>
+            <img src="img/align/assembly.jpg" alt="" class="img-responsive" style=";width:600px;height:400px;margin-right: 30px; margin-bottom: 30px;" />
+            </center>
+
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Product</li>
+                <li><i class="ion-ios-circle-filled"></i> Electronics</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Additional Documenation</h4>
+            <ul class="social-ul">
+              <li class="box-social"><a href="img/align/RGB_LED.ino">Code</a></li>
+              <li class="box-social"><a href="img/align/top2.stl">Top STL</a></li>
+              <li class="box-social"><a href="img/align/bot2.stl">Bottom STL</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Michael Xiao 2019</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
