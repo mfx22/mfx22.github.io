@@ -65,14 +65,14 @@
     <!-- top-bar -->
     <div class="top-bar">
         <h1>[M002] WATERFALL</h1>
-        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / hand</p>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / waterfall</p>
     </div>
     <!-- end top-bar -->
 
     <!-- main-container -->
     <div class="container main-container">
         <div class="col-md-12">
-            <img src="img/hand/cover.png" alt="" class="img-responsive" />
+            <img src="img/waterfall/cover.JPG" alt="" class="img-responsive" />
             <div class="h-30"></div>
         </div>
 
@@ -83,25 +83,93 @@
         </div>
 
         <div class="col-md-9">
-            <h3> Abstract </h3>
+            <h3> Product Goals </h3>
 
-            <p>The force, speed, dexterity, and compact size required of prosthetic hands presents an extreme design challenge for engineers. Current prosthetics rely on high-quality motors to achieve adequate precision, force, and speed in a small enough form factor with the tradeoff of high cost (~$20,000). To combine these performance parameters with affordability, we present a simple, compact, and cost-effective continuously variable transmission (CVT) produced via projection stereolithography. Our transmission, which we call an Elastomeric Passive Transmission (EPT), is a polyurethane composite cylinder which autonomously adjusts its radius based on the tension in a wire spooled around it. We integrated six of these EPTs into a 3D-printed soft prosthetic hand with six active degrees of freedom. Our EPTs provide the prosthetic hand with ~3X increase in grip force without compromising flexion speed. This increased performance leads to finger closing speeds of ~0.5 seconds and maximum fingertip forces of ~32 N per finger. </p>
+            <p>
+              I worked on this product very extensively as the head electrical engineer during my time at Facture Design.  The birth of this project came from the recent legalization of marijuana in Seattle - with this came many cannibis related product ideas and investors willing to try their hand at a new market.  As such, a client came to our firm proposing that we:
+            </p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter enim nosmet ipsos nosse non possumus. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Tecum optime, deinde etiam cum mediocri amico. Et nemo nimium beatus est; Ac ne plura complectar-sunt enim innumerabilia </p>
+            <p>
+              <i>“create an adaptable <b>glassware cleaning device</b> and develop a functional proof-of-concept prototype that exists in its most basic arrangement as a <b>pump, reservoir, tubing and fittings</b>, potentially residing within an enclosure” </i>
+            </p>
+
+            <p>This was a fun, challenging, and interesting project as we created an over-engineered and robust device for performing the task of, that's right... cleaning a bong. </p>
+
+            <h3> Initial Brainstorming </h3>
+
+            <p>
+              To begin the design process, we started with architecture exploration and some initial industrial design.  This included examining what parts we would buy, investigating how we would clean the bong, and defining the user experience.  After extensive research, we chose to utilizee a pump and solenoids to redirect different cleaning agents through the ports of the bong.  An initial wash of water would flush the larger chunks off of the bong into a waste container.  Following this, a cyclee of isopropyl alcohol (IPA) would disenfect and deep clean the inside of the bong.  Lastly, another water rinse cycle would wash out any remaining debris and the remnants of IPA in the bong.  Some of our initial sketches can be seen below.
+            </p>
+
+            <p>
+              Next, we investigated these parts, determining the minimum hardware we would need to bring this idea to life.  We were able to redesign the functional parts to include just four solenoid valves, one 12 V pump, an arduino microcontrollere, 3 buttons, indicator LEDs, and some passive electrical components.  Lastly, we defined what the product would look like and the user experience.  Some of our initial sketches can be seen below.  Three buttons are on the front panel of the device.  One is a power button, one is a go button, and one is a stop button.
+            </p>
+
+            <img src="img/waterfall/sketch.PNG" alt="" class="img-responsive" />
+
+            <h3> Electrical Prototyping </h3>
+
+            <p>
+              After this initial design phase, the team jumped straight into lean prototyping, aiming to get an initial prototype functional as fast as we could.  I worked specifically on the electronics.  The good news with this project was that the electronics were actually pretty basic, such that I could draw out the circuit by hand.  I breadboarded an initial version getting the solenoid working through the transistors, implementing the correct light outputs, and testing the software state diagram I had coded up.
+            </p>
+
+            <img src="img/waterfall/electrical1.PNG" alt="" class="img-responsive" />
+
+            <p>
+              Next, I worked on making the circuit more robust by moving it onto a soldered protoboard, able to handle the large current of the solenoids and pump and resist a good ammount of wear and tear from jostling.  I added header pins to the protoboard to inegrate the buttons and lights for modular design/hot swapping parts and XT30 connectors for reliable power to the solenoids.
+            </p>
+
+            <img src="img/waterfall/electrical2.PNG" alt="" class="img-responsive" />
+
+            <p>
+              Lastly, the team was able to integrate the mechanical and electrical components together and begin making the device look pretty.  We added a standalone 12V power supply, a cable management system, a frosted front face, two retractable bong nozzles, and hid the three tanks (water, IPA, waste) in the back.
+            </p>
+
+            <img src="img/waterfall/mechanical.PNG" alt="" class="img-responsive" />
+
+            <h3> Testing </h3>
+
+            <p>
+              The most important part of the product delivery was testing and being able to show that our device worked effectively.  We started testing by creating uniformly dirty glass tubes artificially.  This was done with a mechanical lung and several glass tubes cut to size.  These dirty tubes were tested with different duration washes in order to expirement with the effectiveness of the wash cycles.
+            </p>
+
+            <img src="img/waterfall/dirty.PNG" alt="" class="img-responsive" style="margin-top: 30px;margin-bottom: 30px;"/>
+
+
+            <p>
+              After developing a reliable methodology, we then began to test with extreme cases of dirty bongs.  Some of these before and afters are shown in the media below.  As seen, our device was extremely successful in the cleaning process and proved its effectiveness and efficiency empirically.
+            </p>
+
+            <img src="img/waterfall/dirty2.PNG" alt="" class="img-responsive" style="margin-top: 30px;margin-bottom: 30px;"/>
+
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qkatKUhJVMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kxm4QBt75tg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <h3> Next Steps</h3>
+
+            <img src="img/waterfall/intermission.JPG" alt="" class="img-responsive" style="margin-top: 30px;margin-bottom: 30px;" />
+
+            <p>
+              This proof of concept device holds a lot of promise for a final product.  In handing off the idea and prototype to our client, we also made somee final industrial design sketches on what the device could look like as a product.
+            </p>
+
+            <img src="img/waterfall/IE.PNG" alt="" class="img-responsive" style="margin-top: 30px;margin-bottom: 30px;" />
+
         </div>
 
         <div class="col-md-3">
             <ul class="cat-ul">
                 <li><i class="ion-ios-circle-filled"></i> Product</li>
-                <li><i class="ion-ios-circle-filled"></i> Publication</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
                 <li><i class="ion-ios-circle-filled"></i> Electronics</li>
             </ul>
             <div class="h-10"></div>
             <h4>Additional Documenation</h4>
             <ul class="social-ul">
-              <li class="box-social"><a href="http://robotics.sciencemag.org/content/3/23/eaau5543">Science Robotics</a></li>
-              <li class="box-social"><a href="img/hand/poster.pdf">Poster</a></li>
-              <li class="box-social"><a href="https://orl.mae.cornell.edu/">ORL</a></li>
+              <li class="box-social"><a href="http://facture.design">Facture Design</a></li>
             </ul>
         </div>
     </div>
