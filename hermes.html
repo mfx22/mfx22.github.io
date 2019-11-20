@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Michael Xiao</title>
+    <link rel="icon" href="img/headshot.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/me.png" width="300" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a class="box-label" href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="https://drive.google.com/open?id=11pI2ksOFykw6gV0w51XoDUFYkddM8-dp">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>[M306] HERMES</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / Hermes</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/hermes/cover.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">A powerful electric skateboard at an unparalleled cost and size</h3>
+            <h5> Facture Product Development </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aNCapiSdaw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3> Product Overview </h3>
+
+            <p>
+              Hermes, or the Headless Electric Skateboard was an awesome project I got to work on during my timee at Facture Product Design.  Hermes was an internal project, meaning that it was born in house, conceptualized by and to be sold by Facture.  Check out the Headless boards page<a href="http://headlessboards.com/"> here!!! </a>  In short, the product is a low cost, Pennyboard-sized electric skateboard.  Rather than a remote, it uses a button on the back end of the board to activate the motor.  After kicking, the user can step on the board to go, leaving hands free to carry bags, eat food, or even wave to your friends.
+            </p>
+
+            <p> <i>
+              "Experience the joy of electric skateboarding without the learning curve or expensive entry price. The Headless Electric Cruiser is a refreshing spin on what it means to be an electric skateboard."
+              </p>
+            </i>
+
+            <p>
+              I ended up being a large driving force in many different parts of the product.  This included designing of the electrical system, fine tuning the batteries, developing the deck, manufacturing parts, testing the board, and developing media for launch.  This was one of my favorite projects for a variety of reasons:
+            </p>
+
+            <ol>
+              <li>I was a large contributor to a lot of critical design decisions</li>
+              <li>I got to try my hand and learn many new skills such as CAM and shooting a trailer</li>
+              <li>The product actually LAUNCHED and is currently selling - this was particularly rewarding getting to see my work come to fruition</li>
+            </ol>
+
+            <h3> PCB redesign </h3>
+
+            <p>
+              The main selling point of the Headless boad is its remarkably low price ($199), beating out competitors by several magnitudes.  We were able to make this price point work by rethinking the entirety of the architecture of a standard electric skateboard.  If you look to models on the market currently, they all make use of an untethered remote control, a electronic speed controller (ESC), and a brushless motor.  Being able to cut these parts out and have a bare-bones approach to making a board on four wheels go (FAST!) was our way to edge out the competition.
+            </p>
+
+            <p>
+              However, cutting these heavily standardized parts was no easy task.  We first had to consider how to make the electronics work consistently and safely.  The innovation here was taking advantage of a motor's back EMF, or the voltage it generates from spinning.  By having a two way check of making sure the wheel is already moving (from a user's initial push) and the trigger button is pressed, we can ensure that there will not be any intense load that the motor needs to overcome.  It rather just has to keep the board moving after it already has started.  The challenges after this involved detecting this double check with as few components as possible on an analog level.
+            </p>
+
+            <p>
+              Though our first go at the PCB was functional, it highlighted several problems.  First, we had to rethink how we were going to attach wires to the board.  Because the motor draws a large amount of current, we needed to use very thick wires (14 gauge).  These stiff wires made the wiring hard to work with and cost a lot of space, something we were trying to minimize.  Additionally, we needed better ways to tune the PCB to accept different thresholds for the back EMF of the motor.
+            </p>
+
+            <p>
+              Our version 2 solved a lot of these problems.  First, we changed the shape to include more stable mountin holes and cutouts such that the wire harness could attach securely, minimizing the stress on the solder joints.  A simple voltage divider was also added to artificially vary the EMF threshold for activation by putting different SMD resistors on the board.  This modular design allowed us to use the same board to test different thresholds and speeds.  The two versions are shown below.
+            </p>
+
+            <img src="img/hermes/pcb.PNG" alt="" class="img-responsive" />
+
+            <h3> Battery Assembly </h3>
+
+            <p>
+              Another critical portion of Hermes I made strides on was the battery system.  This included actually constructing the battery from 18650s and tab welding to sourcing a battery management system (BMS) to conducting research on making a decision between a 3s and 6s cell.  Additionally, I also worked on establishing battery dimensions and seamlessly fitting the battery into the deck.
+            </p>
+
+            <img src="img/hermes/battery.PNG" alt="" class="img-responsive" />
+
+            <h3> Product Testing </h3>
+
+            <p>
+              Any consumer product needs to go through rigorous testing to have relible user specifications.  For our product, we need to specify the maximum speed, range, hill grade, and liftetime of both the battery and the motor.  To begin to record these parameters, we first constructed a data logging box.  This box included a small Arduino, an SD card reader, and sensors to measure the voltage of the battery, the current draw of the motor, and the temperature of the motor.  These parameters were recorded during user testing (me riding up and down a street A LOT), giving us a picture of the battery level during different types of terrain and use.
+            </p>
+
+            <img src="img/hermes/testing 1.PNG" alt="" class="img-responsive" />
+            <img src="img/hermes/testing 2.PNG" alt="" class="img-responsive" />
+
+            <h3> Motor Mount </h3>
+
+            <p>
+              Another addition I worked on was the redesign of the motor mount.  When I started working at Facture, the team was experimenting with motor mounts and started with a PETG 3D printed version as seen below on the left.  This was good for testing but had a lot of slop in it both in tolerancing and durability.  Additionally, we needed to securely fasten the motor to a standard mass produced skateboard truck using the simplest means to minimize labor and cost of production.
+            </p>
+
+            <p>
+              The new version utilized CNC manufacturing to cut profiles from a 1/4" aluminum plate.  This not only provided a simpler design but also was a very robust way to make sure nothing fell apart.  One piece was bolted on to the trucks, holding two C-shaped pieces perpendicularly.  A spacer was placed between the two pieces and could be screwed to connect the two "ends" of the C to tighten or loosen the motor mount.  This adjustability gave us a lot of flexibility and modularity to test different motors and adapt to any changes faced by the system. The team is now aiming to have the motor mount self tension the belt drive using a spring.
+            </p>
+
+            <img src="img/hermes/motor mount.PNG" alt="" class="img-responsive" />
+
+
+            <h3> Deck Geometry </h3>
+
+            <p>
+              We wanted to really differentiate the look of the Headless board.  This meant that the original Penny board style deck with a diamond lattice pattern would not fly.  We explored adding grip tape and several other geometric designs in both aesthetics and functionality to actually grip.  After doing a good amount of concept sketching we chose a rounded jagged teeth pattern that not only gave the functional friction, but also looked pretty awesome.
+            </p>
+
+            <img src="img/hermes/deck.PNG" alt="" class="img-responsive" />
+
+            <h3> Talking to Manufacturers </h3>
+
+            <p>
+              One really cool part of this project was gettin the opportunity to directly connect to large manufacturers, both oversees and in our own city.  This involved making detailed machine drawings, negotiation about different costs, considering production methods, and comparing materials for the various parts.  Additionally, it was great experience to learn about scale and how to maximmize profit by estimating the sales of a product.
+            </p>
+
+            <img src="img/hermes/manufacturers.PNG" alt="" class="img-responsive" />
+
+            <h3> Media Production </h3>
+
+            <p>
+              Lastly, I was a large part of helping shoot aesthetic prototype shots, developing the website, and filming the trailer for the product.  This was something that I had little experience with before but really had a blast doing.  Go check out our product page and maybe buy a Headless board while you're at it!
+            </p>
+
+            <p>
+              <a href="https://headlessboards.com/">Headlessboards.com </a> 
+            </p>
+
+            <img src="img/hermes/AP.PNG" alt="" class="img-responsive" />
+            <img src="img/hermes/protos.png" alt="" class="img-responsive" />
+
+
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Product</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
+                <li><i class="ion-ios-circle-filled"></i> Electronics</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Additional Documenation</h4>
+            <ul class="social-ul">
+              <li class="box-social"><a href="http://facture.design">Facture Design</a></li>
+              <li class="box-social"><a href="https://headlessboards.com/">Headless Boards</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Michael Xiao 2019</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
