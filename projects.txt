@@ -1,0 +1,123 @@
+0 - Contracted work
+
+[M001] - Flick (Facture)
+
+[M002] - Waterfall (Facture)
+
+[M003] - Bolt (Facture)
+
+1 - personal projects
+
+[M101] - Lego Gun
+
+[M102] - Lego card shuffler
+
+[M103] - Lego flight simulator
+
+[M104] - Lego Holomonic Drive
+
+[M105] - Electric skateboard
+
+[M106] - Magic the Gathering Box
+
+[M107] - Rumikub
+
+[M108] - Fire Fingers
+
+2 - class project
+
+[M201] - LED matrix arcade (ECE 3140)
+
+[M202] - AM Radio Transmitter (ECE 3150)
+
+[M203] - Capacitance meter (ECE 4760)
+
+[M204] - 1 DoF helicopter (ECE 4760)
+
+[M205] - ToastBot (ECE 4760)
+
+[M206] - Labyrinth (ECE 3400)
+
+[M207] - RoboPal (INFO 4410)
+
+[M208] - Stellarator Design (ECE 4840)
+
+[M209] - Laser Scanner (ECE 5725)
+
+[M210] - Align - smart level (INFO 4320)
+
+[M211] - Infinity - a drawing tool for children (DEA 6210)
+
+[M212] - Type - a speech to text mechanized typewriter (INFO 4320)
+
+3 - professional project
+
+[M301] - Rubber ducky (ESW)
+
+[M302] - Algal bioreactor (ESW)
+
+[M303] - heat transfer device (ESW)
+
+[M304] - Biodiesel Reactor (ESW)
+
+[M305] - Talos (Facture)
+
+[M306] - Hermes (Facture)
+
+[M307] - Akeso (Facture)
+
+4 - research project
+
+[M401] - Adept
+
+[M402] - Gait
+
+[M403] - soft batteries
+
+[M404] - proprioception test contraption
+
+5 - Software
+
+[M501] - Brickbreaker (Python)
+
+[M502] - Space maze (Java)
+
+[M503] - Shazam (Matlab)
+
+[M504] -  Neural epilepsy detection (Python)
+
+6 - Graphics
+
+[M601] - Cornell Outing Club Logo
+
+[M602] - SpikeJam logo
+
+[M603] - Kul Mayk logo
+
+[M604] - Cornell Radio Club logo
+
+[M605] - Spark Laser Cutting Workshop Banner
+
+[M606] - SmartCharge slide deck
+
+[M607] - TT composite
+
+[M608] - TT Social poster collection
+
+[M609] - TT Mu cow logo
+
+[M610] - CUMake logo
+
+[M611] - DAPL presentation
+
+[M612] - HKN logo and shirt
+
+[M613] - self portrait vector drawing
+
+7 - video/photo
+
+[M701] - Gang Garrison 2 Video
+
+[M702] - Electric Skateboard Video
+
+[M703] - DFS video for 3400
