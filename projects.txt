@@ -24,6 +24,8 @@
 
 [M108] - Fire Fingers
 
+[M109] - Rev Book Cover
+
 2 - class project
 
 [M201] - LED matrix arcade (ECE 3140)
@@ -49,6 +51,8 @@
 [M211] - Infinity - a drawing tool for children (DEA 6210)
 
 [M212] - Type - a speech to text mechanized typewriter (INFO 4320)
+
+[M213] - Waterfül - a speech to text mechanized typewriter (MAE 4340)
 
 3 - professional project
 
