@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Michael Xiao</title>
+    <link rel="icon" href="img/headshot.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/me.png" width="300" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a class="box-label" href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="https://drive.google.com/open?id=11pI2ksOFykw6gV0w51XoDUFYkddM8-dp">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>[M007] LIBRA</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / libra</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/libra/1.JPG" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">An IoT connected food scale to combat food waste</h3>
+            <h5> Facture Product Development </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+
+            <img src="img/libra/2.JPG" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <p>Libra is a wireless smart scale that can be used by consumers to reduce food waste with a connected app experience.  Completed during my time working at <b>Facture Product Development</b>, the device is made to connect via wifi with API integration for getting one-way data from the system.  This ambient humidity and temperature data is streamed to the Google Cloud Platform (GCP) every 5 minutes to accurately track a food's lifespan.  Furthermore, the device has a battery life of 1 month (recharge over USB) and is capable of holding up to 10 lbs with 0.1 lb resolution.  This whole system integrates seemlessly over an iOS app that displays the environmental conditions of the scale/food and also will remind users of food that is running low with a smart shopping list.
+             </p>
+
+             <p>My role in the project was the lead mechanical and electrical engineer.  This meant I was responsible for designing and prototyping the device with guidance from industrial design.  I created the CAD model, chose components, made design for manufacturing (DFM) optimizations, breadboarded the electrical components, created the PCB, and wrote the first revision of firmware to communicate with the app.
+              </p>
+
+             <center><iframe width="560" height="315" src="https://www.youtube.com/embed/jKzSSv0JYM8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+             <p>&nbsp;</p>
+
+             <h3>Mechanical Design</h3>
+             <img src="img/libra/me.png" alt="" class="img-responsive" />
+             <p>&nbsp;</p>
+             <p>The main portion of mechanical design was coordinating the placement and mounting of the components while optimizing the size of the device.  Four load cells are friction fit into the base which also serve as feet for the scale.  The PCB (holding the controller, charging circuitry, temperature and humidity sensor, and load cell amplifier) is mounted using 4 M3 screws and the status LED and power switch are friction fit into the backside of the device.  The device runs on a 1500 mAh LiPo battery which is able to sustain over a month of life using deep sleep on the controller to get the most out of the capacity.  A bottom lid is held on by 4 more M3 screws and heat inserts and a basket portion can optionally be secured to the top side of the device as well.  The casing for the system is intended to be injection molded with careful attention to maximum wall thickness and ribs to support structure where needed.
+              </p>
+             <img src="img/libra/image1.png" alt="" class="img-responsive" />
+
+             <h3>Electrical Design</h3>
+             <p>As with most electrical design, I started by specing components and testing on a breadboard.  Luckily the circuitry for this project was pretty simple, and I was able to complete it relatively quickly.  I ended up selecting an ESP8266 based microcontroller, an Si7021 temperature and humidity sensor, and an HX711 load cell amplifier with 4 micro load cells.
+              </p>
+              <p>&nbsp;</p>
+             <img src="img/libra/bb.jpg" alt="" class="img-responsive" />
+             <p>&nbsp;</p>
+             <p>After confirming everything worked well, I went ahead and created a PCB to avoid loose connections and make assembly of the device easy.  The components were soldered on and ready to be QA'd and tested!
+              </p>
+              <p>&nbsp;</p>
+              <img src="img/libra/pcb.png" alt="" class="img-responsive" />
+              <p>&nbsp;</p>
+              <p>The final part of the project was connecting this hardware to Wifi and communicate to an app via GCP.  I was able to utilize a serial programmer and several firmware libraries to successfully integrate the components together.  The app itself allows the user to connect their device to Wifi using the ESPtouch procedure and can display the current data from any connected scale.
+               </p>
+               <img src="img/libra/app.jpg" alt="" class="img-responsive" width="300" />
+
+
+        </div>
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Product</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
+                <li><i class="ion-ios-circle-filled"></i> Electronics</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Additional Documenation</h4>
+            <ul class="social-ul">
+              <li class="box-social"><a href="http://facture.design/">Facture</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Michael Xiao 2019</p>
+            <p> {proudly made with <3 in HTML & CSS} </p>
+
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
