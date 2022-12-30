@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Michael Xiao</title>
+    <link rel="icon" href="img/headshot.jpg" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/me.png" width="300" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a class="box-label" href="index.html">Intro</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="https://drive.google.com/open?id=11pI2ksOFykw6gV0w51XoDUFYkddM8-dp">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="adventures.html">Adventures</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>[M008] SWISH</h1>
+        <p><a href="index.html">Home</a> / <a href="portfolio.html">portfolio</a> / swish</p>
+    </div>
+    <!-- end top-bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-12">
+            <img src="img/swish/swish-cover.jpg" alt="" class="img-responsive" />
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-12">
+            <h3 class="text-uppercase">Wearable realtime basketball shot feedback</h3>
+            <h5> Facture Product Development </h5>
+            <div class="h-30"></div>
+        </div>
+
+        <div class="col-md-9">
+
+            <h3> Overview </h3>
+            <p>
+              This product, codenamed Swish, is a wearable device that helps basketball players improve their shooting form with technology.  This was done by incorporating an accelerometer with some proprietary data processing to provide feedback to the user.  Feedback would be provided through LEDs and haptic feedback directly on the device, and through an app as well, tracking progress and providing pointers to the user.
+            </p>
+            <img src="img/swish/product.jpg" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <p>
+              I was contracted within this project as the lead engineer, responsible for the technical execution of the product across different disciplines.  I was the primary contributor within Swish, though I worked with a team of 4 at Facture Product Development consisting of a project manager, electrical engineer, mechanical engineer, and an intern.  The level of development here was for an initial functional prototype for the client to show to investors and gather more funding, rather than a production version to go to into mass manufacturing and consumers.  The video below shows a very early prototype of the product - our version aimed to give the device a design overhaul, upgrade the hardware, and make the features more consistent.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/REHhzFTGzFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://youtube.com/embed/446SN2B4c1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3> Component selection </h3>
+
+            <p>
+              The form factor of Swish was dictated by an existing product on the market that slides onto the pointer and middle fingers of the shooting hands, splaying the two fingers apart.  Having width between these two fingers allows the basketball to roll out of the hand on only two surfaces, making shots more accurate and consistent.  This meant we had to constrain our device to the small space between two fingers on a hand.
+            </p>
+            <p>
+              After determining our major size constraint, we began speccing components, starting with the microcontroller.  We wanted something fast enough to quickly process accelerometer data and small enough to fit in the small space constraint.  We ended up landing on the Seeed Studio XIAO nRF52840 (Sense) https://wiki.seeedstudio.com/XIAO_BLE/ microcontroller, which not only checked the boxes for size and processing power, but also included an on-board accelerometer and had built in BLE for app connectivity.
+            </p>
+            <p>
+              After the microcontroller was established, we quickly selected a vibe motor, motor driver, and LEDs as well.  Next up was the battery.  Knowing we had a target 2 hour device battery life, we were able to use the current draw of the components to calculate the capacity of the battery that we needed as well.
+            </p>
+
+            <h3> Initial prototype </h3>
+            <p>
+              Before jumping into more production design, I wanted an initial validation of components.  This led me to create the first prototype, with a crude but functional body.  I quickly designed a mounting bracket and soldered the components together, allowing me to test the individual features before integrating combining everything in firmware.  During this initial testing, I verified that the prototype could gather accelerometer data, trigger various haptic effects, charge and discharge the LiPo battery, and communicate with a phone over BLE.
+            </p>
+
+            <img src="img/swish/proto1.jpg" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dhW4pyTVcX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h3> PCB Design </h3>
+            <img src="img/swish/board.png" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <img src="img/swish/real-pcb.jpg" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <h3> Enclosure Design </h3>
+            <p>
+              There are two versions of the enclosures that were designed.  One version is the functional prototype that houses the current hardware we used during prototyping.  Though slightly bulkier in the area between the fingeres, it functions as intended in the final product.  The second veersion is the aesthetic prototype, aiming to highlight what a production version of the wearable would look like.  It would have a even more custom-tailored board, allowing us to drastically reduce the footprint of the internals, giving a more polished look to the device's form factor.  Below are a few images from the enclosure's development.
+            </p>
+            <img src="img/swish/perspective.PNG" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <img src="img/swish/exploded1.png" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <img src="img/swish/exploded2.png" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <img src="img/swish/exploded3.png" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+            <img src="img/swish/colors.PNG" alt="" class="img-responsive" />
+            <p>&nbsp;</p>
+
+            <h3> Firmware </h3>
+            <p>
+              The firmware for the device here runs of a proprietary algorithm I developed for the client.  It was written in C++ and used accelerometer readings and a state machine to function properly.
+            </p>
+            <h3> App Development </h3>
+            <p>
+              One of the new skills I picked up through this project was iPhone app development and BLE integration using xCode.  The app for this version of Swish connects the phone to the wearable, collects shot data, and changes the mode characteristics of the wearable.
+            </p>
+            <p>
+              Note that the video below is an early implementation of the firmware on the wearable.
+            </p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/J9erigE1Y34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="col-md-3">
+            <ul class="cat-ul">
+                <li><i class="ion-ios-circle-filled"></i> Product</li>
+                <li><i class="ion-ios-circle-filled"></i> Software</li>
+                <li><i class="ion-ios-circle-filled"></i> Electronics</li>
+                <li><i class="ion-ios-circle-filled"></i> App development</li>
+            </ul>
+            <div class="h-10"></div>
+            <h4>Additional Documenation</h4>
+            <ul class="social-ul">
+              <li class="box-social"><a href="http://facture.design/">Facture</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Michael Xiao 2019</p>
+            <p> {proudly made with <3 in HTML & CSS} </p>
+
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
